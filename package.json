@@ -1,14 +1,14 @@
 {
   "name": "react-create-component-from-tag-prop",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create a `react` component from a `tag` prop.",
   "keywords": [
     "react", "component", "prop", "tag", "as", "ui-kit", "styled-components"
   ],
   "repository": "jameslnewell/react-create-component-from-tag-prop",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "files":[
-    "./dist/index.js"
+    "dist/index.js"
   ],
   "dependencies": {
     "lodash.omit": "^4.5.0",

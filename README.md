@@ -48,7 +48,7 @@ export default () => (
 
 ## Change log
 
-### 1.0.2
+### 1.0.2-3
 
 - fix: stop `npm` ignoring `./dist` files
 
