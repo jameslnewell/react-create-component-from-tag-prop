@@ -102,7 +102,7 @@ describe('createComponentFromTag', () => {
       });
 
       const Text = styled(TextFromTagProp)`
-        font-size: ${({size}) => `${size}px` || '12px'};
+        font-size: ${({size}) => size && `${size}px` || '12px'};
         font-weight: ${({bold}) => bold && 'bold' || 'normal'};
         font-style: ${({italic}) => italic && 'italic' || 'normal'};
       `;

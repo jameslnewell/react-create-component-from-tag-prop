@@ -23,7 +23,7 @@ const TextFromTagProp = createComponentFromTagProp({
 });
 
 export default styled(TextFromTagProp)`
-  font-size: ${({size}) => `${size}px` || '12px'};
+  font-size: ${({size}) => size && `${size}px` || '12px'};
   font-weight: ${({bold}) => bold && 'bold' || 'normal'};
   font-style: ${({italic}) => italic && 'italic' || 'normal'};
 `;
@@ -45,3 +45,9 @@ export default () => (
 );
 
 ```
+
+## Change log
+
+### 1.0.1
+
+- fix: mistake in the `Usage` example
