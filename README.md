@@ -14,6 +14,9 @@ npm install --save react-create-component-from-tag-prop
 
 `Text.jsx`
 ```js
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import createComponentFromTagProp from 'react-create-component-from-tag-prop';
 
 const TextFromTagProp = createComponentFromTagProp({
@@ -22,16 +25,29 @@ const TextFromTagProp = createComponentFromTagProp({
   propsToOmit: ['size', 'bold', 'italic']
 });
 
-export default styled(TextFromTagProp)`
+const Text = styled(TextFromTagProp)`
   font-size: ${({size}) => size && `${size}px` || '12px'};
   font-weight: ${({bold}) => bold && 'bold' || 'normal'};
   font-style: ${({italic}) => italic && 'italic' || 'normal'};
 `;
 
+Text.propTypes = {
+  as: PropTypes.oneOf([
+    'p', 'span', 'label', 
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6'
+  ]),
+  size: PropTypes.number,
+  bold: PropTypes.boolean,
+  italic: PropTypes.boolean
+}
+
+export default Text;
+
 ```
 
 `ContactPage.jsx`
 ```js
+import React from 'react';
 import Text from './Text';
 
 export default () => (
@@ -47,6 +63,11 @@ export default () => (
 ```
 
 ## Change log
+
+### 1.1.0
+
+- add: updated `Usage` docs showing an example of limiting tags via `prop-types`
+
 
 ### 1.0.2-3
 
