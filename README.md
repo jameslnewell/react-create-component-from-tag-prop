@@ -48,6 +48,10 @@ export default () => (
 
 ## Change log
 
+### 1.0.2
+
+- fix: stop `npm` ignoring `./dist` files
+
 ### 1.0.1
 
 - fix: mistake in the `Usage` example
