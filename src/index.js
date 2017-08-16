@@ -1,5 +1,5 @@
 import React from 'react';
-import omit from 'lodash.omit';
+import omit from 'lodash/omit';
 
 export default ({tag: defaultTag = 'div', prop = 'tag', propsToOmit = []} = {}) => {
   return ({children, ...otherProps}) => {
