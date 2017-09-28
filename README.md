@@ -4,7 +4,7 @@ Create a `react` component from a `tag` prop.
 
 Lets your users to choose which HTML elements get styled by your 💅 `styled-components`.
 
-> Note: This utility is a handy escape hatch for 💅 `styled-components`, but also consider whether you could use [mixins](https://github.com/styled-components/styled-components/blob/master/docs/tips-and-tricks.md#using-javascript-to-our-advantage) instead.
+> Note: This utility is a handy escape hatch for 💅 `styled-components`, but also consider whether you could use [mixins](https://github.com/styled-components/styled-components/blob/master/docs/tips-and-tricks.md#using-javascript-to-our-advantage) or [`.withComponent(tag)`](https://www.styled-components.com/docs/basics#extending-styles) instead.
 
 ## Installation
 
@@ -65,6 +65,10 @@ export default () => (
 ```
 
 ## Change log
+
+### 1.3.0
+
+- switch from `lodash.omit` to `lodash/pickBy` to future proof usage of `lodash` ([#1](https://github.com/jameslnewell/react-create-component-from-tag-prop/pull/1)).
 
 ### 1.2.0
 
