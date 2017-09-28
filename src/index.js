@@ -1,10 +1,14 @@
 import React from 'react';
-import omit from 'lodash.omit';
+import pickBy from 'lodash/pickBy';
 
 export default ({tag: defaultTag = 'div', prop = 'tag', propsToOmit = []} = {}) => {
   return ({children, ...otherProps}) => {
     const tag = otherProps[prop] || defaultTag;
-    const props = omit(otherProps, [prop, ...propsToOmit]);
+    const omitPropsKeys = [prop, ...propsToOmit];
+    const props = pickBy(otherProps, (value, key) => {
+      return omitPropsKeys.indexOf(key) === -1;
+    });
+
     return React.createElement(tag, props, children);
   };
 };
