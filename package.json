@@ -31,7 +31,7 @@
   "scripts": {
     "build": "babel ./src/index.js --out-dir ./dist",
     "test": "jest",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build && yarn run test"
   },
   "license": "MIT"
 }
