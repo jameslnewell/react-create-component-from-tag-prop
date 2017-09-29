@@ -2,7 +2,7 @@
 
 Create a `react` component from a `tag` prop.
 
-Lets your users to choose which HTML elements get styled by your 💅 `styled-components`.
+Lets your users choose which HTML elements get styled by your 💅 `styled-components`.
 
 > Note: This utility is a handy escape hatch for 💅 `styled-components`, but also consider whether you could use [mixins](https://github.com/styled-components/styled-components/blob/master/docs/tips-and-tricks.md#using-javascript-to-our-advantage) or [`.withComponent(tag)`](https://www.styled-components.com/docs/basics#extending-styles) instead.
 
