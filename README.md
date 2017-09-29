@@ -66,6 +66,10 @@ export default () => (
 
 ## Change log
 
+### 1.3.1
+
+- fix: oops! generated files were being built to the wrong folder and not published to npm
+
 ### 1.3.0
 
 - switch from `lodash.omit` to `lodash/pickBy` to future proof usage of `lodash` ([#1](https://github.com/jameslnewell/react-create-component-from-tag-prop/pull/1)).
