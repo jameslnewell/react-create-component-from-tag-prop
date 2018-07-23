@@ -66,6 +66,11 @@ export default () => (
 
 ## Change log
 
+### 1.4.0
+
+- switch from `lodash/pickBy` to a custom utility function
+- switch `react` from a `dependency` to a `peerDependency` and support `v16` 
+
 ### 1.3.1
 
 - fix: oops! generated files were being built to the wrong folder and not published to npm
